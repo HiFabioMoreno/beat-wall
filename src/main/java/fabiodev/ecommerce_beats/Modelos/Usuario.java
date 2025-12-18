@@ -17,17 +17,14 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min = 5, max = 30)
-    @NotNull
+   @NotNull
     @Column(unique = true)
     private String nombre;
 
-    @NotNull
-    @Email
+    @Email(message = "Email invalido")
     @Column(unique = true)
     private String email;
 
-    @Size(min = 12, max = 30)
     @NotNull
     private String password;
 
@@ -37,18 +34,21 @@ public class Usuario {
     @NotNull
     private String pais;
 
+    @NotNull
     private String descripcion;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
     @NotNull
     private LocalDate fechaNacimiento;
 
+    @NotNull
     @CreationTimestamp
     private LocalDate fechaRegistro;
 
-    @Column(unique = true, nullable = true)
+    @Column(unique = true)
     private List<String> redesSociales;
 
     @OneToMany(mappedBy = "productor", cascade = CascadeType.ALL)
