@@ -1,0 +1,26 @@
+package fabiodev.ecommerce_beats.Modelos.Enums;
+
+public enum Tonalidad {
+    CMAJOR,
+    CMINOR,
+    DbMAJOR,
+    DbMINOR,
+    DMAJOR,
+    DMINOR,
+    EMAJOR,
+    EMINOR,
+    FMAJOR,
+    FMINOR,
+    GbMAJOR,
+    GbMINOR,
+    GMAJOR,
+    GMINOR,
+    AbMAJOR,
+    AbMINOR,
+    AMAJOR,
+    AMINOR,
+    BbMAJOR,
+    BbMINOR,
+    BMAJOR,
+    BMINOR,
+}
